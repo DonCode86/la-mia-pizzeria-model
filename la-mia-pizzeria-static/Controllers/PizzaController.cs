@@ -26,7 +26,7 @@ namespace la_mia_pizzeria_static.Controllers
             Pizza pizzaDiavola = new Pizza("Diavola", "Salame piccante", "diavola.jfif", 8.00);
 
             List<Pizza> pizzaList = new List<Pizza> { pizzaBoscaiola, pizzaCapricciosa, pizzaDiavola };
-
+            
             return View(pizzaList[id]);
         }
         public IActionResult Privacy()
