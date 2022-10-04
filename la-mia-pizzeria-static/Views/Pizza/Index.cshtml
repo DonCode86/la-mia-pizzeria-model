@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 <a class="nav-link" asp-area="" asp-controller="Exercises" asp-action="Index">Esercizi Razor</a>
 <ul class="d-flex">
+    @{
+        int count = 0;
+    }
     @foreach (Pizza pizza in pizzaList)
     {
             <li class="card m-4" style="width: 15rem; list-style: none">
@@ -19,6 +22,8 @@
                         <h2 class="card-title text-danger">Pizza @pizza.Name</h2>
                     <p class="card-text">Descrizione: @pizza.Ingredients</p>
                     <span class="mb-5">Prezzo: € @pizza.Price</span>
+                    <p>Id: @count</p>
+                    <a href="@Url.Action("Details","Pizza", new{ id = ++count})">Info</a>
                 </div>
             </li>
     }
