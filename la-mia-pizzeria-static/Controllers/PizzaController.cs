@@ -15,18 +15,25 @@ namespace la_mia_pizzeria_static.Controllers
 
         public IActionResult Index()
         {
-         
-            return View();
-        }
 
-        public IActionResult Details(int id)
-        {
             Pizza pizzaBoscaiola = new Pizza("Boscaiola", "Funghi e salsiccia", "pizza-boscaiola.jpg", 9.00);
             Pizza pizzaCapricciosa = new Pizza("Capricciosa", "Funghi, salsiccia, uova, prosciutto crudo", "capricciosa.jfif", 12.00);
             Pizza pizzaDiavola = new Pizza("Diavola", "Salame piccante", "diavola.jfif", 8.00);
 
             List<Pizza> pizzaList = new List<Pizza> { pizzaBoscaiola, pizzaCapricciosa, pizzaDiavola };
+
+            return View(pizzaList);
+        }
+
+        public IActionResult Details(int id)
+        {
             
+
+            Pizza pizzaBoscaiola = new Pizza("Boscaiola", "Funghi e salsiccia", "pizza-boscaiola.jpg", 9.00);
+            Pizza pizzaCapricciosa = new Pizza("Capricciosa", "Funghi, salsiccia, uova, prosciutto crudo", "capricciosa.jfif", 12.00);
+            Pizza pizzaDiavola = new Pizza("Diavola", "Salame piccante", "diavola.jfif", 8.00);
+            List<Pizza> pizzaList = new List<Pizza> { pizzaBoscaiola, pizzaCapricciosa, pizzaDiavola };
+
             return View(pizzaList[id]);
         }
         public IActionResult Privacy()
