@@ -21,8 +21,6 @@ namespace la_mia_pizzeria_static.Controllers
 
         public IActionResult Details(int id)
         {
-            
-
             Pizza pizzaBoscaiola = new Pizza("Boscaiola", "Funghi e salsiccia", "pizza-boscaiola.jpg", 9.00);
             Pizza pizzaCapricciosa = new Pizza("Capricciosa", "Funghi, salsiccia, uova, prosciutto crudo", "capricciosa.jfif", 12.00);
             Pizza pizzaDiavola = new Pizza("Diavola", "Salame piccante", "diavola.jfif", 8.00);
